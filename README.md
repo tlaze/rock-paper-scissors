@@ -15,10 +15,9 @@ Game Ends When First Player Reaches 3 Points
 
 ## Screenshot
 
-<img width="446" alt="Screen Shot 2021-09-16 at 15 47 27" src="https://user-images.githubusercontent.com/47471193/133676391-7f7675a6-d861-4392-bb42-f83af1207e09.png">
+<img width="451" alt="Screen Shot 2021-09-16 at 15 50 01" src="https://user-images.githubusercontent.com/47471193/133676721-5a4e1e82-12bb-4e15-8d43-f7efc127fe4a.png">
 
-<img width="449" alt="Screen Shot 2021-09-16 at 15 47 36" src="https://user-images.githubusercontent.com/47471193/133676399-f9e1e696-b844-463d-8151-6f3853f644eb.png">
-
+<img width="451" alt="Screen Shot 2021-09-16 at 15 50 14" src="https://user-images.githubusercontent.com/47471193/133676729-1553d3dc-8469-409e-89e4-a4ff70eb0c87.png">
 
 ## Links
 
