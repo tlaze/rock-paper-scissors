@@ -28,21 +28,18 @@ function gamePlay(){
             // Computer's random number corresponds with their choice of Rock:0, Paper:1, or Scissors:2
             var computerChoice = computerTurn();
             if(computerChoice === 0){
-                console.log("Computer Chose Rock - Draw");
                 ties++;
-                console.log(wins,ties,losses);
+                window.alert("You Chose Rock\nI Chose Rock" + "\nIt's a Draw\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
             }
             else if(computerChoice === 1){
-                console.log("Computer Chose Paper - Lose");
                 losses++;
+                window.alert("You Chose Rock\nI Chose Paper" + "\nI win!\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
                 console.log(wins,ties,losses)
             }
             else{
-                console.log("Computer Chose Scissors - Win");
                 wins++;
-                console.log(wins,ties,losses);
+                window.alert("You Chose Rock\nI Chose Scissors" + "\nYou Won. :(\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
             }
-            window.alert("I choose" + computerChoice);
    
         }
         // Action if user chooses Paper
@@ -51,40 +48,41 @@ function gamePlay(){
             // Computer's random number corresponds with their choice of Rock:0, Paper:1, or Scissors:2
             var computerChoice = computerTurn();
             if(computerChoice === 0){
-                console.log("Computer Chose Rock - Win");
                 wins++;
-                console.log(wins,ties,losses);
+                window.alert("You Chose Paper\nI Chose Rock" + "\nYou Won. :(\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
+
             }
             else if(computerChoice === 1){
-                console.log("Computer Chose Paper - Tie");
                 ties++;
-                console.log(wins,ties,losses)
+                window.alert("You Chose Paper\nI Chose Paper" + "\nIt's a Draw\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
+
+
             }
             else{
-                console.log("Computer Chose Scissors - Lose");
                 losses++;
-                console.log(wins,ties,losses);
+                window.alert("You Chose Paper\nI Chose Scissors" + "\nI win!\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
+
             }
         }
         // Action if user choses Scissors
         else if(userChoice === "S"|| userChoice === "s" || userChoice === "Scissors" || userChoice === "scissors"){
-            console.log("User chose Scissors");
+
             // Computer's random number corresponds with their choice of Rock:0, Paper:1, or Scissors:2
             var computerChoice = computerTurn();
             if(computerChoice === 0){
-                console.log("Computer Chose Rock - Lose");
                 losses++;
-                console.log(wins,ties,losses);
+                window.alert("You Chose Scissors\nI Chose Rock" + "\nI win!\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
+
             }
             else if(computerChoice === 1){
-                console.log("Computer Chose Paper - Win");
                 wins++;
-                console.log(wins,ties,losses)
+                window.alert("You Chose Scissors\nI Chose Paper" + "\nYou won. :(\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
+
             }
             else{
-                console.log("Computer Chose Scissors - Draw");
                 ties++;
-                console.log(wins,ties,losses);
+                window.alert("You Chose Scissors\nI Chose Scissors" + "\nIt's a Draw\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
+
             }
         }
         //Action if user choses to cancel mid game
@@ -92,7 +90,8 @@ function gamePlay(){
             var endEarly = confirm("Are you sure you want to end the game?\nClick 'Ok' to End or 'Cancel' to Return to the Game");
             console.log(endEarly);
             if(endEarly == true){
-                window.alert("Thanks For Playing!");
+                window.alert("Thanks For Playing!\nFinal Score\nYou: " + wins +"\nMe: " + losses);
+                return;
             }
             else{
                 gamePlay();
