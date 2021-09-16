@@ -1,5 +1,5 @@
 var wins = 0;
-var losses = 0
+var losses = 0;
 var ties = 0;
 
 
@@ -24,6 +24,26 @@ function gamePlay(){
         // Action if user chooses Rock
         if(userChoice === "R"|| userChoice === "r" || userChoice === "Rock" || userChoice === "rock"){
             console.log("User chose Rock");
+            
+            // Computer's random number corresponds with their choice of Rock:0, Paper:1, or Scissors:2
+            var computerChoice = computerTurn();
+            if(computerChoice === 0){
+                console.log("Computer Chose Rock - Draw");
+                ties++;
+                console.log(wins,ties,losses);
+            }
+            else if(computerChoice === 1){
+                console.log("Computer Chose Paper - Lose");
+                losses++;
+                console.log(wins,ties,losses)
+            }
+            else{
+                console.log("Computer Chose Scissors - Win");
+                wins++;
+                console.log(wins,ties,losses);
+            }
+
+            
         }
         // Action if user chooses Paper
         else if(userChoice === "P"|| userChoice === "p" || userChoice === "Paper" || userChoice === "paper"){
@@ -52,12 +72,10 @@ function gamePlay(){
         }
 }
 
-function computerTurn(){
+function computerTurn(randomNumber){
     // Picks a random number between 0 and 2
-    console.log(Math.floor(Math.random() * 3));
-    var computerChoice = Math.floor(Math.random() * 3);
-    return computerChoice;
+    var randomNumber = Math.floor(Math.random() * 3);
+    return randomNumber;
 }
 
-// playGame();
-computerTurn()
+playGame();
