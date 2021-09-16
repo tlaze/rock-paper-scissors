@@ -19,7 +19,7 @@ function playGame(){
 function gamePlay(){
         while( wins < 3 && losses < 3){
         // Prompts user for choice
-        var userChoice = prompt("Type R for Rock, P for Paper, or S for Scissors");
+        var userChoice = prompt("First to Win 5 Rounds is the Champion\nType R for Rock, P for Paper, or S for Scissors");
 
         // Action if user chooses Rock
         if(userChoice === "R"|| userChoice === "r" || userChoice === "Rock" || userChoice === "rock"){
