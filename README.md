@@ -21,3 +21,9 @@ Game Ends When First Player Reaches 3 Points
 
 
 ## Links
+
+Live App
+https://tlaze.github.io/rock-paper-scissors/
+
+Code
+https://github.com/tlaze/rock-paper-scissors
