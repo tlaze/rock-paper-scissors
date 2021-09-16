@@ -2,7 +2,6 @@ var wins = 0;
 var losses = 0;
 var ties = 0;
 
-
 // Initiates Game
 function playGame(){
     var letsPlay = window.confirm("Lets play Rock, Paper, Scissors");
@@ -17,7 +16,8 @@ function playGame(){
 }
 //Prompts user for choices and determines who won that round
 function gamePlay(){
-        while( wins < 3 && losses < 3){
+    // Loops until user or computer has a score of 3
+    while(wins < 3 && losses < 3){
         // Prompts user for choice
         var userChoice = window.prompt("First to Win 3 Rounds is the Champion\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties + "\n\nType R for Rock, P for Paper, or S for Scissors");
 
@@ -39,6 +39,7 @@ function gamePlay(){
                 window.alert("You Chose Rock\nI Chose Scissors" + "\nYou Won. :(\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
             }
         }
+
         // Action if user chooses Paper
         else if(userChoice === "P"|| userChoice === "p" || userChoice === "Paper" || userChoice === "paper"){
 
@@ -57,6 +58,7 @@ function gamePlay(){
                 window.alert("You Chose Paper\nI Chose Scissors" + "\nI win!\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
             }
         }
+
         // Action if user choses Scissors
         else if(userChoice === "S"|| userChoice === "s" || userChoice === "Scissors" || userChoice === "scissors"){
 
@@ -75,30 +77,35 @@ function gamePlay(){
                 window.alert("You Chose Scissors\nI Chose Scissors" + "\nIt's a Draw\n\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties);
             }
         }
+
         //Action if user choses to cancel mid game
         else if(userChoice === null){
             var endEarly = confirm("Are you sure you want to end the game?\nClick 'Ok' to End or 'Cancel' to Return to the Game");
             if(endEarly == true){
                 window.alert("Thanks For Playing!\nFinal Score\nYou: " + wins +"\nMe: " + losses);
+                return
             }
             else{
                 gamePlay();
             }
         }
+
         // Action if user doesn't enter appropriate response
         else{
             window.alert("Please chose either Rock, Paper, or Scissors");
         }
-     }
+    }
     //  Alert if user wins
      if(wins === 3){
          console.log("user wins");
          window.alert("Congrats! You are the winner!\nFinal Score\nYou: " + wins +"\nMe: " + losses);
+         playAgain();
 
      }
     //  Alert if computer wins
      if(losses === 3){
         window.alert("I Am Victorious! Better Luck Next Time\nFinal Score\nYou: " + wins +"\nMe: " + losses);
+        playAgain();
      }
 }
 
