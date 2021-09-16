@@ -17,7 +17,7 @@ function playGame(){
 }
 //Prompts user for choices and determines who won that round
 function gamePlay(){
-
+        while( wins < 3 && losses < 3){
         // Prompts user for choice
         var userChoice = prompt("Type R for Rock, P for Paper, or S for Scissors");
 
@@ -42,8 +42,7 @@ function gamePlay(){
                 wins++;
                 console.log(wins,ties,losses);
             }
-
-            
+   
         }
         // Action if user chooses Paper
         else if(userChoice === "P"|| userChoice === "p" || userChoice === "Paper" || userChoice === "paper"){
@@ -70,6 +69,14 @@ function gamePlay(){
             console.log(userChoice);
             gamePlay();
         }
+
+     }
+     if(wins === 3){
+         console.log("user wins");
+     }
+     if(losses === 3){
+         console.log("computer wins");
+     }
 }
 
 function computerTurn(randomNumber){
