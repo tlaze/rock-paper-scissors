@@ -33,6 +33,7 @@ function gamePlay(){
         else if(userChoice === "S"|| userChoice === "s" || userChoice === "Scissors" || userChoice === "scissors"){
             console.log("User chose Scissors");
         }
+        //Action if user choses to cancel mid game
         else if(userChoice === null){
             var endEarly = confirm("Are you sure you want to end the game?\nClick 'Ok' to End or 'Cancel' to Return to the Game");
             console.log(endEarly);
@@ -51,4 +52,12 @@ function gamePlay(){
         }
 }
 
-playGame();
+function computerTurn(){
+    // Picks a random number between 0 and 2
+    console.log(Math.floor(Math.random() * 3));
+    var computerChoice = Math.floor(Math.random() * 3);
+    return computerChoice;
+}
+
+// playGame();
+computerTurn()
