@@ -24,7 +24,7 @@ function gamePlay(){
         // Action if user chooses Rock
         if(userChoice === "R"|| userChoice === "r" || userChoice === "Rock" || userChoice === "rock"){
             console.log("User chose Rock");
-            
+    
             // Computer's random number corresponds with their choice of Rock:0, Paper:1, or Scissors:2
             var computerChoice = computerTurn();
             if(computerChoice === 0){
@@ -47,10 +47,44 @@ function gamePlay(){
         // Action if user chooses Paper
         else if(userChoice === "P"|| userChoice === "p" || userChoice === "Paper" || userChoice === "paper"){
             console.log("User chose Paper");
+            // Computer's random number corresponds with their choice of Rock:0, Paper:1, or Scissors:2
+            var computerChoice = computerTurn();
+            if(computerChoice === 0){
+                console.log("Computer Chose Rock - Win");
+                wins++;
+                console.log(wins,ties,losses);
+            }
+            else if(computerChoice === 1){
+                console.log("Computer Chose Paper - Tie");
+                ties++;
+                console.log(wins,ties,losses)
+            }
+            else{
+                console.log("Computer Chose Scissors - Lose");
+                losses++;
+                console.log(wins,ties,losses);
+            }
         }
         // Action if user choses Scissors
         else if(userChoice === "S"|| userChoice === "s" || userChoice === "Scissors" || userChoice === "scissors"){
             console.log("User chose Scissors");
+            // Computer's random number corresponds with their choice of Rock:0, Paper:1, or Scissors:2
+            var computerChoice = computerTurn();
+            if(computerChoice === 0){
+                console.log("Computer Chose Rock - Lose");
+                losses++;
+                console.log(wins,ties,losses);
+            }
+            else if(computerChoice === 1){
+                console.log("Computer Chose Paper - Win");
+                wins++;
+                console.log(wins,ties,losses)
+            }
+            else{
+                console.log("Computer Chose Scissors - Draw");
+                ties++;
+                console.log(wins,ties,losses);
+            }
         }
         //Action if user choses to cancel mid game
         else if(userChoice === null){
@@ -71,9 +105,11 @@ function gamePlay(){
         }
 
      }
+    //  Alert if user wins
      if(wins === 3){
          console.log("user wins");
      }
+    //  Alert if computer wins
      if(losses === 3){
          console.log("computer wins");
      }
