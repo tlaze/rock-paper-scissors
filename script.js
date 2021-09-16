@@ -5,7 +5,7 @@ var ties = 0;
 
 // Initiates Game
 function playGame(){
-    var letsPlay = confirm("Lets play Rock, Paper, Scissors");
+    var letsPlay = window.confirm("Lets play Rock, Paper, Scissors");
         // If user hits Ok then game starts and user is prompted with choice
         if(letsPlay === true){
             gamePlay();
@@ -19,7 +19,7 @@ function playGame(){
 function gamePlay(){
         while( wins < 3 && losses < 3){
         // Prompts user for choice
-        var userChoice = prompt("First to Win 5 Rounds is the Champion\nType R for Rock, P for Paper, or S for Scissors");
+        var userChoice = window.prompt("First to Win 5 Rounds is the Champion\nYour Score: "+ wins +"\nMy Score: " + losses + "\nDraws: " + ties + "\n\nType R for Rock, P for Paper, or S for Scissors");
 
         // Action if user chooses Rock
         if(userChoice === "R"|| userChoice === "r" || userChoice === "Rock" || userChoice === "rock"){
@@ -42,6 +42,7 @@ function gamePlay(){
                 wins++;
                 console.log(wins,ties,losses);
             }
+            window.alert("I choose" + computerChoice);
    
         }
         // Action if user chooses Paper
@@ -91,7 +92,7 @@ function gamePlay(){
             var endEarly = confirm("Are you sure you want to end the game?\nClick 'Ok' to End or 'Cancel' to Return to the Game");
             console.log(endEarly);
             if(endEarly == true){
-                alert("Thanks For Playing!");
+                window.alert("Thanks For Playing!");
             }
             else{
                 gamePlay();
