@@ -1,7 +1,4 @@
-# rock-paper-scissors
-Mini Project 3 for Georgia Tech Coding Bootcamp
-
-## Classic Rock Paper Scissors Against Computer
+##Rock Paper Scissors
 
 Prompts User to Enter Their Choice
 
